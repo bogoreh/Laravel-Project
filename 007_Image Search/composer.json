@@ -1,0 +1,26 @@
+{
+    "name": "caraxes/image-search",
+    "description": "A Laravel package for image-search processing.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ImageSearch\\": "app/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ImageSearch\\Providers\\ImageSearchServiceProvider"
+            ]
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpstan/phpstan": "^1.0",
+        "phpunit/phpunit": "^8.4"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
