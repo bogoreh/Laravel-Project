@@ -1,0 +1,115 @@
+.chess-board {
+    border: 3px solid #333;
+    display: inline-block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.chess-row {
+    display: flex;
+}
+
+.chess-square {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+    .chess-square {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.chess-square.light {
+    background-color: #f0d9b5;
+}
+
+.chess-square.dark {
+    background-color: #b58863;
+}
+
+.chess-square:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.chess-square.selected {
+    background-color: #4ade80 !important;
+    box-shadow: inset 0 0 0 3px #22c55e;
+}
+
+.chess-square.valid-move {
+    background-color: #a7f3d0 !important;
+}
+
+.chess-square.valid-capture::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ef4444;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.chess-piece {
+    font-size: 50px;
+    line-height: 1;
+    user-select: none;
+    transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+    .chess-piece {
+        font-size: 30px;
+    }
+}
+
+.chess-piece:hover {
+    transform: scale(1.1);
+}
+
+.white-piece {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.black-piece {
+    color: #1f2937;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
+}
+
+.move-item {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: 'Courier New', monospace;
+}
+
+.move-item:hover {
+    background-color: #f3f4f6;
+}
+
+.move-number {
+    font-weight: bold;
+    color: #6b7280;
+    margin-right: 10px;
+}
+
+.players-info .card {
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s;
+}
+
+.players-info .card:hover {
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
